@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    /* Add styles for the page here */
+  </style>
+</head>
+<body>
+  <div id="login-container">
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br>
+      <input type="button" value="Login" onclick="login()">
+    </form>
+  </div>
+  <script>
+    // Add JavaScript functions here
+    function login() {
+      // Get the username and password entered by the user
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      // Check if the username and password are correct
+      if (username == "admin" && password == "password") {
+        // If correct, redirect the user to the welcome page
+        window.location.replace("welcome.html");
+      } else {
+        // If incorrect, display an error message
+        alert("Incorrect username or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
